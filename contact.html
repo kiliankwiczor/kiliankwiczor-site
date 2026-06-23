@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Kilian KWICZOR</title>
+  <meta name="description" content="Contactez Kilian KWICZOR pour animer votre événement : devis, disponibilités, échange.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500;600&family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">KILIAN K.</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="work.html">Projets</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Envoyer un message</a>
+    <button class="nav-toggle" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </nav>
+
+  <main>
+    <section class="container" style="padding-top: calc(var(--nav-height) + 60px); text-align:center;">
+      <span class="section-label">Contact</span>
+      <h1>Envoyez-moi un message</h1>
+      <p style="color:var(--text-muted); margin-top:16px; max-width:60ch; margin-left:auto; margin-right:auto;">
+        Une animation, une présentation, une émission ? Décrivez votre projet et je reviens vers vous sous 24 à 48 h ouvrées.
+      </p>
+    </section>
+
+    <section class="container" style="padding-top: 20px;">
+      <div id="form-success" class="form-message success" style="max-width:560px; margin: 0 auto 24px; display:none;">
+        ✓ Votre message a bien été envoyé. Je vous réponds très vite.
+      </div>
+      <div id="form-error" class="form-message error" style="max-width:560px; margin: 0 auto 24px; display:none;">
+        ✗ Une erreur est survenue. Merci de réessayer ou de m'écrire directement par email.
+      </div>
+
+      <form class="form" method="POST" action="contact.php" novalidate>
+        <div class="form-field">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Parlez-moi de votre événement : date, lieu, type, public..."></textarea>
+        </div>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px;" aria-hidden="true">
+        <button type="submit" class="btn btn-primary" style="justify-content:center;">Envoyer</button>
+      </form>
+    </section>
+
+    <section class="container" style="text-align:center;">
+      <h2>Ou réservez un appel</h2>
+      <p style="color:var(--text-muted); margin: 16px 0 28px;">Un appel gratuit pour discuter de votre projet, sans engagement.</p>
+      <a href="mailto:kilianlamare@gmail.com" class="btn btn-secondary">Me contacter par email</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">KILIAN K.</div>
+      <p>Animateur & Présentateur — Lille, France entière</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="work.html">Projets</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p>© <span id="year"></span> Kilian KWICZOR. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
