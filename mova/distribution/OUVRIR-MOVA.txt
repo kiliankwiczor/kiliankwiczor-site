@@ -1,0 +1,45 @@
+MOVA - VERSION PERSONNELLE PRETE A OUVRIR - WINDOWS 64 BITS
+
+1. Clic droit sur l'archive ZIP > Extraire tout.
+2. Dans le dossier MOVA, double-cliquez sur OUVRIR-MOVA.cmd.
+3. Attendez l'ouverture du navigateur. Gardez la fenetre MOVA ouverte.
+
+Node.js et la base PostgreSQL embarquee sont inclus.
+Vous n'avez pas besoin d'installer Node.js, Docker, npm ou PostgreSQL.
+Aucun service payant, compte externe ou droit administrateur n'est requis
+pour l'execution personnelle. Aucun logiciel n'est installe globalement.
+
+L'application s'ouvre normalement sur http://127.0.0.1:8080 SUR VOTRE PC.
+Ce n'est pas un lien Internet public, ni l'adresse du cloud de la conversation.
+Si le navigateur ne s'ouvre pas, recopiez l'adresse affichee dans la fenetre.
+
+Au premier lancement, creez votre propre compte de test et completez le
+questionnaire. La communaute est locale a cet ordinateur : aucun faux membre
+ni faux avis n'est precharge. Rien n'est publie automatiquement sur Internet.
+
+Pour arreter proprement : Ctrl+C dans la fenetre MOVA.
+Vos donnees sont conservees dans %LOCALAPPDATA%\MOVA-Pilote.
+Pour reprendre : relancez OUVRIR-MOVA.cmd, puis reconnectez-vous si necessaire.
+Une sauvegarde des series conservees localement peut necessiter une
+synchronisation explicite avant de quitter la seance.
+
+Si une instance est deja ouverte, le lanceur reutilise cette instance.
+Si le port 8080 est occupe par une autre application, fermez cette application
+ou ouvrez un terminal dans ce dossier, puis executez :
+  set MOVA_DESKTOP_PORT=8084
+  OUVRIR-MOVA.cmd
+Ne lancez pas deux instances sur le meme dossier de donnees.
+Ne supprimez pas le dossier de donnees pour resoudre un probleme de lancement.
+
+Cette distribution ne transfere pas les donnees d'une ancienne version Docker.
+Conservez l'ancienne version et ses exports si vous l'avez deja utilisee.
+
+Pilote en developpement, pas une application commerciale finalisee.
+Les contenus sportifs attendent une validation professionnelle.
+Paiements, emails reels et publication sur les stores ne sont pas actives.
+Le moteur et les parcours sont testes sous Linux. Le binaire Windows officiel
+est fourni avec SHA-256 verifie, mais le double-clic sur Windows n'a pas pu
+etre execute dans l'environnement disponible.
+
+Licences et provenance : PROVENANCE.json, Node-LICENSE.txt et les fichiers
+LICENSE presents dans node_modules. Le moteur Node.js est le binaire officiel.

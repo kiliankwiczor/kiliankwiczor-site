@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*.local
+.expo/
+dist/
+coverage/
+.local/
+playwright-report/
+test-results/
+dist-native/
+dist-desktop/

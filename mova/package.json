@@ -1,0 +1,41 @@
+{
+  "name": "mova",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "api": "npm run dev -w @mova/api",
+    "mobile": "npm run start -w @mova/mobile",
+    "web": "npm run web -w @mova/mobile",
+    "db:migrate": "npm run migrate -w @mova/api",
+    "typecheck": "tsc --noEmit -p apps/api && tsc --noEmit -p apps/mobile && tsc --noEmit -p tsconfig.scripts.json",
+    "test": "tsx --test --test-concurrency=1 packages/domain/src/*.test.ts apps/api/test/*.test.ts",
+    "lint": "eslint apps packages scripts e2e *.ts",
+    "build:web": "npm run export -w @mova/mobile",
+    "db:up": "bash scripts/db-up.sh",
+    "test:e2e": "playwright test",
+    "format": "prettier --write apps packages scripts e2e *.ts",
+    "build:bundles": "npm exec -w @mova/mobile -- expo export --platform ios --platform android --output-dir dist-native",
+    "desktop": "tsx scripts/desktop.ts",
+    "build:personal": "node scripts/build-personal.mjs",
+    "personal": "node .local/personal-release/app.mjs",
+    "prepare:personal": "npm ci --prefix distribution --workspaces=false --omit=dev"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^22.15.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^9.30.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.34.0"
+  },
+  "type": "module"
+}

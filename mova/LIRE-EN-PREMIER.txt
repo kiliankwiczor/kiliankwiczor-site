@@ -1,0 +1,8 @@
+MOVA - SOURCES DE DEVELOPPEMENT
+
+Pour decouvrir sans installation de Node/Docker, utiliser la distribution
+MOVA-Pret-a-ouvrir-Windows.zip et son fichier OUVRIR-MOVA.cmd.
+
+Cette archive contient les sources. Voir README.md, WINDOWS.md et
+distribution/BUILD.md pour developper ou reproduire la distribution.
+Le lanceur DEMARRER-MOVA.cmd des sources utilise le mode Node/Docker.

@@ -1,0 +1,47 @@
+name: MOVA checks
+on:
+  push:
+    paths: ['mova/**', '.github/workflows/mova.yml']
+  pull_request:
+    paths: ['mova/**', '.github/workflows/mova.yml']
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine@sha256:266d3c257594e195b309ae9d1805e54c788f1d7b375f56bf6c367aac6c917e7b
+        env:
+          POSTGRES_USER: mova
+          POSTGRES_PASSWORD: mova_local_only
+          POSTGRES_DB: mova
+        ports: ['5433:5432']
+        options: >-
+          --health-cmd "pg_isready -U mova" --health-interval 5s
+          --health-timeout 5s --health-retries 10
+    defaults:
+      run:
+        working-directory: mova
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: mova/package-lock.json
+      - run: npm ci
+      - run: npm run db:migrate
+      - run: npm run lint && npm run typecheck && npm test
+      - name: Embedded PostgreSQL permissions and workflows
+        run: MOVA_DATABASE_ENGINE=embedded MOVA_LOCAL_DATA_DIR=/tmp/mova-ci-embedded npm test
+      - run: npm run build:web
+      - run: npx playwright install --with-deps chromium
+      - run: |
+          npm run api > /tmp/mova-api.log 2>&1 &
+          node scripts/serve-web.mjs > /tmp/mova-web.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:3001/health && curl -fsS http://localhost:8081/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npx playwright test

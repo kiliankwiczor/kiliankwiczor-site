@@ -1,0 +1,23 @@
+{
+  "name": "@mova/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "migrate": "tsx src/migrate.ts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.13",
+    "@fastify/cors": "^11.0.0",
+    "@fastify/helmet": "^13.0.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "@mova/domain": "0.1.0",
+    "fastify": "^5.4.0",
+    "pg": "^8.16.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.0"
+  }
+}

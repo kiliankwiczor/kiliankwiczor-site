@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "MOVA · pilote",
+    "slug": "mova-pilot",
+    "scheme": "mova",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": ["expo-router", "expo-secure-store"],
+    "ios": { "supportsTablet": true, "bundleIdentifier": "fr.mova.pilot" },
+    "android": { "package": "fr.mova.pilot" },
+    "web": { "bundler": "metro", "output": "single" },
+    "experiments": { "typedRoutes": false }
+  }
+}
