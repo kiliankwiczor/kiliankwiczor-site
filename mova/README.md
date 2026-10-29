@@ -6,6 +6,8 @@ Projet Expo iOS/Android/Web + API Fastify TypeScript + PostgreSQL 17. Le site pe
 
 ## Ouvrir sur Windows
 
+Un échec de lancement a été signalé sur le poste Windows du propriétaire le 29 octobre 2026. Il reste à diagnostiquer ; les essais Linux ne constituent pas un test Windows. Pour la prochaine distribution sur téléphone, voir [le guide Android / test interne Google Play](docs/ANDROID_DISTRIBUTION.md). Aucun APK/AAB ou lien Play Store n’est encore disponible.
+
 **[Télécharger la version Windows prête à ouvrir](https://github.com/kiliankwiczor/kiliankwiczor-site/raw/refs/heads/main/mova/downloads/MOVA-Pret-a-ouvrir-Windows.zip)**, puis extraire tout et ouvrir `MOVA/OUVRIR-MOVA.cmd`.
 
 Voir **WINDOWS.md** : la nouvelle distribution **MOVA-Pret-a-ouvrir-Windows.zip** contient le moteur Node Windows officiel, PostgreSQL embarqué et l’interface déjà construite. Extraire tout, puis double-cliquer sur **OUVRIR-MOVA.cmd**. Aucun Node.js/Docker à installer sur le poste destinataire. Le code commun est testé sous Linux ; le double-clic Windows reste à vérifier sur un poste Windows. Il n’existe pas de lien cloud public dans cette session.
@@ -62,7 +64,7 @@ Sans Chromium système, `npx playwright install chromium` (réseau requis), puis
 
 ## Reprendre
 
-Lire FEATURE_STATUS.md, ROADMAP.md, DECISIONS.md et LAUNCH_CHECKLIST.md. Le bilan courant est dans docs/SESSION_3_STATUS.md ; les autres bilans conservent les sessions antérieures. Prochaine priorité : validation professionnelle, durcissement auth/DB, tests sur appareils et intégrations externes. Les sessions Web sont en mémoire et disparaissent au rechargement ; sur mobile le jeton est conservé dans SecureStore. Les brouillons restent sur cet appareil jusqu’à déconnexion ou suppression. Une déconnexion purge les brouillons MOVA.
+Lire FEATURE_STATUS.md, ROADMAP.md, DECISIONS.md et LAUNCH_CHECKLIST.md. Le bilan courant est dans docs/SESSION_4_STATUS.md ; les autres bilans conservent les sessions antérieures. Prochaine priorité : serveur pilote adapté, compte/projet de distribution et tests sur Android, avec les validations requises. Les sessions Web sont en mémoire et disparaissent au rechargement ; sur mobile le jeton est conservé dans SecureStore. Les brouillons restent sur cet appareil jusqu’à déconnexion ou suppression. Une déconnexion purge les brouillons MOVA.
 
 Médias, messages privés, achats, notifications, invitations, vrais emails et analytics avancés ne sont pas opérationnels. Ils sont indiqués comme indisponibles, sans faux résultats. Le backend refuse volontairement `NODE_ENV=production` tant que les prérequis de lancement ne sont pas traités.
 

@@ -4,6 +4,8 @@ Mon site personnel.
 
 ## Découvrir MOVA sur Windows
 
+**État du pilote :** un échec de lancement Windows a été signalé le 29 octobre 2026 et reste à diagnostiquer. La préparation d’une installation Android est documentée dans [le guide de distribution Android](mova/docs/ANDROID_DISTRIBUTION.md). Aucun APK ni lien Play Store n’est encore disponible.
+
 MOVA est une application de musculation et de communauté en cours de développement, en français. Le site personnel reste à la racine ; le projet MOVA se trouve dans [`mova/`](mova/README.md).
 
 **[Télécharger MOVA prêt à ouvrir pour Windows 64 bits — environ 47 Mo](https://github.com/kiliankwiczor/kiliankwiczor-site/raw/refs/heads/main/mova/downloads/MOVA-Pret-a-ouvrir-Windows.zip)**

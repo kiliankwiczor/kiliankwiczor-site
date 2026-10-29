@@ -31,3 +31,4 @@ Les sites officiels des concurrents renvoient un refus de domaine par le proxy. 
 | 017 | Distribution personnelle autonome avec PostgreSQL WASM | Supprimer les installations Node/Docker chez le destinataire, conserver le même backend et les mêmes RLS ; usage local uniquement et tests des deux moteurs. |
 | 018 | Runtime Windows officiel épinglé et vérifié | Distribuer un moteur connu avec licences/provenance, sans installateur distant ni script de téléchargement au premier lancement. |
 | 019 | Cartes PNG Web générées après relecture serveur | Partage volontaire sans identité/charges ; export image natif restant explicite. |
+| 020 | Première distribution Android par test interne, sans soumission automatique | Préparer APK/AAB et bloquer les URL locales ou identifiants provisoires ; comptes propriétaires, serveur HTTPS, signature et tests appareil requis avant distribution. |

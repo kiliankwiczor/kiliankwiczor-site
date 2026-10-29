@@ -15,7 +15,7 @@
     "web": "npm run web -w @mova/mobile",
     "db:migrate": "npm run migrate -w @mova/api",
     "typecheck": "tsc --noEmit -p apps/api && tsc --noEmit -p apps/mobile && tsc --noEmit -p tsconfig.scripts.json",
-    "test": "tsx --test --test-concurrency=1 packages/domain/src/*.test.ts apps/api/test/*.test.ts",
+    "test": "tsx --test --test-concurrency=1 packages/domain/src/*.test.ts apps/api/test/*.test.ts scripts/*.test.ts",
     "lint": "eslint apps packages scripts e2e *.ts",
     "build:web": "npm run export -w @mova/mobile",
     "db:up": "bash scripts/db-up.sh",
@@ -25,7 +25,8 @@
     "desktop": "tsx scripts/desktop.ts",
     "build:personal": "node scripts/build-personal.mjs",
     "personal": "node .local/personal-release/app.mjs",
-    "prepare:personal": "npm ci --prefix distribution --workspaces=false --omit=dev"
+    "prepare:personal": "npm ci --prefix distribution --workspaces=false --omit=dev",
+    "android:check": "node --import tsx scripts/check-android.ts"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",

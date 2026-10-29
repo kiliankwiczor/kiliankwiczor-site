@@ -14,6 +14,8 @@ PostgreSQL géré en UE, rôles auth/app/maintenance séparés, sauvegardes chif
 
 ## Stores
 
+Les profils Android sont maintenant préparés dans `apps/mobile/eas.json` : APK `preview` et AAB `play-internal`, sans soumission automatique. Voir [ANDROID_DISTRIBUTION.md](docs/ANDROID_DISTRIBUTION.md) pour les prérequis, commandes et limites. La configuration bloque une distribution qui réutiliserait le serveur local ou les identifiants provisoires. Aucun build cloud ni binaire natif n’a été produit.
+
 Comptes Apple Developer / Google Play du propriétaire, identifiants de bundle définitifs, marque disponible, certificats et politiques confidentialité. Configurer EAS et profils development/preview/production seulement après choix du compte ; aucune commande de build cloud ou publication ne doit entraîner une dépense sans accord. Pour appareils, choisir Expo Go compatible ou un development build selon les modules. Déclarer deep links/universal links uniquement avec domaine contrôlé ; ne pas inventer de domaine de production.
 
 Fournir privacy labels / Data Safety basés sur traitements réels, compte de revue, restauration des achats, suppression in-app, abonnement/renouvellement transparent. Pas d’annonce « disponible sur les stores » avant publication effective.

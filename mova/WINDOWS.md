@@ -1,5 +1,7 @@
 # Découvrir MOVA sur Windows
 
+**Retour du 29 octobre 2026 :** le lancement ne fonctionne pas sur le poste du propriétaire. La cause n’est pas identifiée ; aucune correction Windows n’est encore validée. La procédure ci-dessous décrit le fonctionnement prévu. Une adresse Web s’ouvre dans Edge, Chrome ou Firefox, pas dans le Bloc-notes ; elle ne répond que si le lanceur démarre réellement le serveur local. Le passage à Android est préparé dans [ANDROID_DISTRIBUTION.md](docs/ANDROID_DISTRIBUTION.md).
+
 ## Version prête à ouvrir — recommandée
 
 **[Télécharger MOVA depuis GitHub](https://github.com/kiliankwiczor/kiliankwiczor-site/raw/refs/heads/main/mova/downloads/MOVA-Pret-a-ouvrir-Windows.zip)**. Le bouton vert « Code → Download ZIP » télécharge les sources du projet ; utilisez ce lien pour obtenir l’application prête à ouvrir.

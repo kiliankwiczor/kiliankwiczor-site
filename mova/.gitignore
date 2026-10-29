@@ -9,3 +9,14 @@ playwright-report/
 test-results/
 dist-native/
 dist-desktop/
+*.jks
+*.keystore
+*.p8
+*.p12
+*.apk
+*.aab
+credentials.json
+play-service-account*.json
+google-services.json
+/apps/mobile/android/
+/apps/mobile/ios/

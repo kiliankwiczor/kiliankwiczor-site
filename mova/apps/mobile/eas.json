@@ -1,0 +1,21 @@
+{
+  "cli": {
+    "version": "27.1.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "environment": "preview",
+      "env": { "MOVA_DISTRIBUTION_BUILD": "1" },
+      "android": { "buildType": "apk" }
+    },
+    "play-internal": {
+      "distribution": "store",
+      "environment": "production",
+      "autoIncrement": true,
+      "env": { "MOVA_DISTRIBUTION_BUILD": "1" },
+      "android": { "buildType": "app-bundle" }
+    }
+  }
+}

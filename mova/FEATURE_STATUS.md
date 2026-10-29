@@ -29,9 +29,10 @@
 | Analytics / KPI | Contrat documenté, aucun SDK | Compteurs instantanés seulement |
 | Landing / attente | Proposition HTML livrée | Collecte inactive, aucun déploiement |
 | Compilations natives | Bundles JS/Hermes générés | Aucun APK/AAB/IPA produit, aucun test physique |
+| Distribution Android / Google Play | Profils EAS APK/AAB et contrôle de configuration préparés | Compte Play absent, projet Expo/API distante non configurés ; aucune compilation ou publication |
 
 Les écrans d’indisponibilité ne constituent pas des fonctions développées. ROADMAP.md définit les prochains incréments ; LAUNCH_CHECKLIST.md bloque la commercialisation.
 
 Mode de développement ordinateur : lanceur Node/Docker et DEMARRER-MOVA.cmd ; voir WINDOWS.md. Le cœur du lanceur et le serveur sont testés sous Linux, le double-clic Windows reste à vérifier sur un poste Windows.
 
-Distribution personnelle prête à ouvrir : Node Windows officiel et PostgreSQL WASM inclus, aucun Node/Docker à installer sur le PC destinataire. Voir distribution/OUVRIR-MOVA.txt. L’exécution Windows physique n’est pas validée ici ; le moteur commun et les parcours sont testés sous Linux.
+Distribution personnelle : Node Windows officiel et PostgreSQL WASM inclus, aucun Node/Docker à installer sur le PC destinataire. Voir distribution/OUVRIR-MOVA.txt. **Un échec de lancement Windows a été signalé le 29 octobre 2026 ; il reste à diagnostiquer.** Le moteur commun et les parcours sont testés sous Linux ; cela ne valide pas le lancement sur le PC Windows.

@@ -1,5 +1,16 @@
 # Tests et preuves
 
+## Contrôles du 29 octobre 2026 — préparation Android
+
+- ESLint et TypeScript API/mobile/scripts : passés.
+- Suite complète avec PostgreSQL embarqué : **45 tests passés, zéro échec/ignoré**, dont quatre nouveaux tests des limites de configuration Android. Aucun achat ou appareil natif testé.
+- Expo résout correctement la configuration locale existante, et la configuration de distribution avec des valeurs réservées aux tests, sans compilation ni requête vers l’API de test.
+- `npm run android:check` échoue explicitement en l’absence d’API HTTPS, projet Expo et identifiant Android définitif : blocage attendu, pas une application compilée.
+- Aucun APK/AAB, SDK Android ou certificat de signature disponible. Aucun build EAS ou envoi Play Console exécuté.
+- Le propriétaire signale un échec du lanceur Windows. Cause non identifiée ; ne pas déduire le fonctionnement Windows des essais Linux historiques.
+
+## Preuves historiques du moteur local
+
 Validation locale du 28 octobre 2026. Installer avec `npm ci` et PostgreSQL 17 avant les tests. `npm test` utilise Fastify inject avec une vraie base PostgreSQL ; pas de mock de persistance. Les données créées utilisent `example.invalid` et sont supprimées en fin de suite. Ne jamais pointer DATABASE_URL vers une base réelle pour cette commande.
 
 ## Résultats
